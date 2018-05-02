@@ -1,0 +1,49 @@
+#formGenerator {
+
+    .dndDragover {
+        .dndPlaceholder {
+            margin: 16px;
+            display: block;
+            min-height: 250px;
+            .border-radius ( 3px );
+            background: lighten(@grey, 30%);
+            // background: @red;
+        }
+        .dndDraggingSource {
+            md-card {
+                display: none;
+            }
+        }
+    }
+
+    md-tabs md-tabs-wrapper {
+        background-color: @white;
+        border-color: rgba(0,0,0,0.12);
+        border-width: 0 0 1px;
+        border-style: solid;
+    }
+
+    md-card {
+        md-card-header {
+            padding: 5px;
+            background: lighten(@grey, 20%);
+            md-card-header-text {
+                cursor: move;
+            }
+        }
+    }
+
+}
+/**
+ * textAngular customization
+ *
+ */
+.ta-text {
+    background: lighten(@grey, 30%);
+    // background: @green;
+    .border-radius(4px);
+}
+.focussed .ta-text {
+    background: transparent;
+    .border-radius(0px);
+}

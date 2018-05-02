@@ -8,11 +8,19 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**gist** `directive | pipe | service | class | guard | interface | enum | module`
+
+You can use `ng generate [gist] [gist]/gistName`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+**environment** `local | dev | stage | prod`
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Example command `ng build --environment=prod --sourcemaps=false --base-href=http://example.com --extract-licenses=true --verbose=true`
+
+build commnd for **PRODUCTION:** `ng build --environment=prod --sourcemaps=false --base-href=http://example.com `
+
+
+--environment
 
 ## Running unit tests
 
