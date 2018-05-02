@@ -4,9 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
-    "test": "ng test",
+    "start-local": "ng serve -e local -o true -sm true -bh / -v true",
+    "start": "ng serve -e dev -o true -sm true -bh / -v true",
+    "build": "node -e \"console.log('WARNING:\\n\\n\\t Please update build script !!!\\n\\n')\" && ng build --prod",
+    "test": "ng test -e dev -sr true -sm false --log-level=debug",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },

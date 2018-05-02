@@ -13,7 +13,7 @@
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
-      "test": "test.ts",
+      "test": "tests/test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "dft",
@@ -23,10 +23,10 @@
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
-        "local": "environments/environment.local.ts",
-        "dev": "environments/environment.dev.ts",
-        "stage": "environments/environment.stage.ts",
-        "prod": "environments/environment.prod.ts"
+        "local": "environments/local.ts",
+        "dev": "environments/development.ts",
+        "stage": "environments/staging.ts",
+        "prod": "environments/production.ts"
       }
     }
   ],
