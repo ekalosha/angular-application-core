@@ -2,9 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
+
 ## Ignores
 
 All files marked as local should be ignored `*local.*`
+
 
 ## Development server
 
@@ -23,6 +25,7 @@ You can use `ng generate [gist] [gist]/gistName`.
 
 To create test spec by yourself may add flag to the command `--spec=false`.
 
+
 ## Build
 
 **environment** `local | dev | stage | prod`
@@ -34,15 +37,18 @@ Build command for **DEVELOPMENT:** `ng build -e dev -sm true -bh / -v true`.
 
 Build command for **STAGING:** `ng build -e stage -sm true -bh http://example.com -d http://example.com -v true`.
 
-Build command for **PRODUCTION:** `npm run start-local` **or**  `ng build -e prod -sm false -bh http://example.com -d http://example.com -v true --extract-licenses=true`.
+Build command for **PRODUCTION:** `npm run build` **or**  `ng build -e prod -sm false -bh http://example.com -d http://example.com -v true --extract-licenses=true`.
+
 
 ## Running unit tests
 
 Run `npm run test` **or** `ng test -e dev -sr true -sm false --log-level=debug` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
 
 ## Further help
 
