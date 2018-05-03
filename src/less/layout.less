@@ -1,33 +1,36 @@
-/* Sticky footer styles  */
+/* base layout behavior */
 html {
     height: 100%;
     min-height: 100%;
     position: relative;
-    //@footer-height: 111px; defined in variables.less
-    body {
+    
+    // temporary varaibles
+    @header-height: 100px;
+    @footer-height: 100px;
+    
+    //
+    #layout {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
         position: relative;
-        box-sizing: border-box;
-        /* Margin bottom by footer height */
-        padding-bottom: @footer-height;
-        /* materialize fix */
-        height: auto;
-        min-height: inherit;
-        &.no-footer {
-            padding-bottom: 0;
-            #footer {
-                display: none;
-            }
+        
+        #header {
+            background: red;
+            height: @header-height;
         }
+        
+        #main {
+            display: block;
+            background: green;
+            min-height: ~'calc(100vh - ' @header-height + @footer-height~')';
+        }
+        
+        #footer {
+            background: blue;
+            height: @footer-height;
+        }
+        
     }
-    #wrap {
-        position: relative;
-    }
-    #footer {
-        box-sizing: border-box;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        /* Set the fixed height of the footer */
-        height: @footer-height;
-    }
+
 }
