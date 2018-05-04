@@ -14,13 +14,14 @@ import { StateService } from '@uirouter/angular';
 })
 export class HomePage {
     /**
-     * using vm to dafine publick data for the page 
-     * and deleagate some properties
+     * using vm to define publick data of the page 
+     * and deleagate prepared properties
      *
      */
     public vm = {
 
     }
+    
     /**
      * constructor holder to define what exactly past in public vm object
      * 
@@ -30,6 +31,11 @@ export class HomePage {
 
     }
     
+    /**
+     * example of programmatically redirect
+     * 
+     *
+     */
     private goLogin () {
         this.state.go('login');
     }

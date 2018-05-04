@@ -1,12 +1,12 @@
 // outsource
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RootModule, UIRouterModule } from "@uirouter/angular";
-
+// 
 import { LayoutComponent } from './layout.component';
 // app states
-import { homeState, HomeModule } from './home/home.module';
-import { loginState, LoginModule } from './login/login.module';
-
+import { homeState } from './home/home.state';
+import { loginState } from './login/login.state';
 
 
 /**
@@ -15,8 +15,9 @@ import { loginState, LoginModule } from './login/login.module';
  *
  */
 export const routing: RootModule = {
-    useHash: true,
-    otherwise: '/home',
+    // useHash: false, // html5mode - without # 
+    useHash: true, // with # 
+    otherwise: homeState.url,
     states: [
         homeState,
         loginState,
@@ -29,12 +30,20 @@ export const routing: RootModule = {
  *
  */
 @NgModule({
-    declarations: [ LayoutComponent ],
+    // define list of all page components
+    declarations: [
+        LayoutComponent,
+        homeState.component,
+        loginState.component,
+    ],
+    // define dependensiec for all page components
     imports: [
-        HomeModule,
-        LoginModule,
+        CommonModule,
         UIRouterModule.forRoot(routing)
     ],
-    exports: [ UIRouterModule ]
+    // define outgoing modules
+    exports: [
+        UIRouterModule
+    ]
 })
 export class LayoutModule { }

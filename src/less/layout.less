@@ -16,17 +16,27 @@ html {
         position: relative;
         
         #header {
+            overflow: hidden;
+            // test props to separate page root components
             background: red;
             height: @header-height;
         }
         
         #main {
-            display: block;
+            // not known error with ui-view display: block
+            // display: block;
+            // overflow: hidden;
+            // NOTE alternate solution
+            width: 100%;
+            display: inline-block;
+            // test props to separate page root components
             background: green;
-            min-height: ~'calc(100vh - ' @header-height + @footer-height~')';
+            min-height: ~'calc(100vh - '@header-height + @footer-height~')';
         }
         
         #footer {
+            overflow: hidden;
+            // test props to separate page root components
             background: blue;
             height: @footer-height;
         }

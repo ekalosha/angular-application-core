@@ -1,24 +1,8 @@
 // outsource
-import { NgModule } from '@angular/core';
-import { UIRouterModule } from "@uirouter/angular";
+// import { NgModule } from '@angular/core';
+// import { UIRouterModule } from '@uirouter/angular';
 // app
-import { LoginPage } from './login.component';
-
-/**
- * Metada of home page
- *
- *
- */
-@NgModule({
-    declarations: [ LoginPage ],
-    bootstrap: [],
-    exports: [],
-    imports: [
-        UIRouterModule, // directives uiSref and uiSrefActive
-    ],
-    providers: [],
-})
-export class LoginModule { }
+import { LoginPage } from './login.page';
 
 /**
  * Metada of home state
